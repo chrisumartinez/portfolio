@@ -2,22 +2,13 @@ import { Flex, Box, Stack } from "@chakra-ui/layout";
 import { Text } from "@chakra-ui/layout";
 import { Link, Image } from "@chakra-ui/react";
 import Logo from "./images/code.svg";
+import { Link as RouterLink } from "react-router-dom";
 
 const Icon = (props) => {
 	return (
 		<Box boxSize="30px">
 			<Image src={Logo} alt="Logo" />
 		</Box>
-	);
-};
-
-const MenuItem = ({ children, to, ...props }) => {
-	return (
-		<Link href={to}>
-			<Text display="block" {...props}>
-				{children}
-			</Text>
-		</Link>
 	);
 };
 
@@ -30,9 +21,18 @@ const MenuItemStack = () => {
 			direction={["column", "row", "row", "row"]}
 			pt={[4, 4, 0, 0]}
 		>
-			<MenuItem>Github</MenuItem>
-			<MenuItem>LinkedIn</MenuItem>
-			<MenuItem>Resume</MenuItem>
+			<RouterLink to="/">
+				<Link>Home</Link>
+			</RouterLink>
+			<RouterLink to="/github">
+				<Link>Github</Link>
+			</RouterLink>
+			<RouterLink to="/linkedin">
+				<Link>LinkedIn</Link>
+			</RouterLink>
+			<RouterLink to="/resume">
+				<Link>Resume</Link>
+			</RouterLink>
 		</Stack>
 	);
 };
