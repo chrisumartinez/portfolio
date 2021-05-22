@@ -21,59 +21,73 @@ export const Experiences = [
 		duration: "Aug 2018 - Feb 2019",
 		company: "Parabug",
 		description: [
-			"Deployed responsive, web application service to replace existing labor intesive quote system.",
-			"Implemented client/serverside testing for user input and compiled data into JSON necessary for an accurate quote.",
-			"Established a product roadmap with a vision of executing a refined and scalable product for the client",
-			"Integrated Node.js/Javascript frameworks such as NodeMailer, Toastr, OAuth, and Google Maps API",
-			"Generated an automatic email system to streamline job requests containing KML/PDF files from client input ot the company.",
+			"• Deployed responsive, web application service to replace existing labor intesive quote system.",
+			"• Implemented client/serverside testing for user input and compiled data into JSON necessary for an accurate quote.",
+			"• Established a product roadmap with a vision of executing a refined and scalable product for the client",
+			"• Integrated Node.js/Javascript frameworks such as NodeMailer, Toastr, OAuth, and Google Maps API",
+			"• Generated an automatic email system to streamline job requests containing KML/PDF files from client input ot the company.",
 		],
 	},
 	{
 		id: "3",
 		imageName: "sbcc",
-		position: "Software Engineer",
+		position: "Student Software Engineer",
 		location: "Santa Barbara, CA",
 		duration: "Nov 2015 - April 2016",
 		company: "Santa Barbara City College: MESA",
 		description: [
-			"Constructed prototypes of UI and SQL Databases.",
-			"Implemented concise, minimal UI for seamless user interactions that is tailored to the client.",
-			"Integrated an SQL database to store local data in a portable location for the ease of the client",
+			"• Constructed prototypes of UI and SQL Databases.",
+			"• Implemented concise, minimal UI for seamless user interactions that is tailored to the client.",
+			"• Integrated an SQL database to store local data in a portable location for the ease of the client",
 		],
 	},
 ];
 
 export const Skills = [
 	{
-		Languages: "Python, Node.js, Java, Javascript, React",
-		Other: "Git, SQL, Agile",
+		languages: ["Python", "Node.js", "Java", "Javascript", "React"],
+		other: ["Git", "SQL", "Agile"],
 	},
 ];
 
 export const Projects = [
 	{
 		title: "Heartbeats",
+		url: "https://github.com/LetsGetSwiftyy/heartBeats",
 		keywords: ["Swift", "Apple API", "Spotify API"],
-		description:
-			"Developed  a Mobile iOS Application that communicates with the apple watch to play different genres  of  music according to the BPM. Developed and Tested UI elements for a simpler design. Integrated Spotify's API to allow users to sign into the app with Spotify.",
+		date: "Aug 2018 - Dec 2018",
+		description: [
+			"• Developed  a Mobile iOS Application that communicates with the apple watch to play different genres  of  music according to the BPM.",
+			"• Developed and Tested UI elements for a simpler design.",
+			"• Integrated Spotify's API to allow users to sign into the app with Spotify.",
+		],
 	},
 	{
 		title: "DigiCard",
+		url: "https://github.com/chrisumartinez/DigiCard-Android",
+		date: "Nov 2017",
 		keywords: ["Kotlin", "Java"],
-		description:
-			"An Android Application that virtualizes business cards for networking. Enhanced UI for a detailed, user experience. Collaborated with colleagues to detail clear specifications within a constrained timeline. ",
+		description: [
+			"• An Android Application that virtualizes business cards for networking.",
+			"• Enhanced UI for a detailed, user experience.",
+			"• Collaborated with colleagues to detail clear specifications within a constrained timeline. ",
+		],
 	},
 	{
 		title: "Flix",
+		date: "Sept 2018",
+		url: "https://github.com/chrisumartinez/week1Flix",
 		keywords: ["Swift"],
-		description:
-			"An iOS application that utilizes a third party API to show recent released movies  and their information. Iterated through design process by receiving feedback for UI,  prototyping in increasing fidelity,  and testing across various devices.",
+		description: [
+			"• An iOS application that utilizes a third party API to show recent released movies and their information.",
+			"• Iterated through design process by receiving feedback for UI,  prototyping in increasing fidelity,  and testing across various devices.",
+		],
 	},
 ];
 
 export const Education = [
 	{
-		imageUrl: "../src/images/sbcc.jpeg",
+		imageName: "sbcc",
 		location: "Santa Barbara, CA",
 		startDate: "Aug 2011",
 		endDate: "May 2016",
@@ -82,7 +96,7 @@ export const Education = [
 		studyType: "AS in Computer Science",
 	},
 	{
-		imageUrl: "./images/csumb.png",
+		imageName: "csumb",
 		location: "Monterey, CA",
 		startDate: "Aug 2016",
 		endDate: "May 2018",
@@ -91,7 +105,8 @@ export const Education = [
 		studyType: "BS in Computer Science",
 	},
 	{
-		imageUrl: "./images/codepath.jpeg",
+		studyType: "Certificate of Completion",
+		imageName: "codepath",
 		location: "Monterey, CA",
 		startDate: "Aug 2018",
 		endDate: "Dec 2018",

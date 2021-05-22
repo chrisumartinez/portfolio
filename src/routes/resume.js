@@ -1,16 +1,18 @@
 import React from "react";
 import { Flex, Text, Box, Spacer } from "@chakra-ui/layout";
-import { Education, Skills, Experiences, Projects } from "../data/resumeData";
-import { useColorModeValue } from "@chakra-ui/react";
+import { Experiences } from "../data/resumeData";
 import { Image } from "@chakra-ui/image";
-import imageSBCC from "../images/sbcc.jpeg";
+
+import Skills from "../components/skills.js";
+import Education from "../components/education.js";
+import Projects from "../components/projects.js";
+
+import imageSBCC from "../images/sbcc.png";
 import imageParabug from "../images/parabug.png";
 import imageCSUMB from "../images/csumb.png";
-import imageCodePath from "../images/codepath.jpeg";
+import imageCodePath from "../images/codepath.png";
 
-const ImageHandler = (imageName) => {
-	console.log(imageName);
-
+export const ImageHandler = (imageName) => {
 	switch (imageName) {
 		case "sbcc":
 			return imageSBCC;
@@ -26,23 +28,23 @@ const ImageHandler = (imageName) => {
 };
 
 const ExperienceCard = (props) => {
-	const { position, location, duration, company, description } = props;
+	const { position, description } = props;
 
 	return (
 		<Flex
-			boxShadow="lg"
+			box-shadow=" rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;"
 			maxW="640px"
 			direction="column"
-			rounded="xl"
+			rounded="lg"
 			p={10}
 			m={10}
 			justifyContent="space-around"
-			position="relative"
-			bg={useColorModeValue("white", "gray.800")}
+			bg="#0B5351"
+			color="#fafafa"
 		>
 			<Flex direction="column" textAlign="center" justifyContent="center">
 				<Text
-					fontFamily="Victor Mono"
+					fontFamily="Open Sans"
 					fontWeight="bold"
 					fontStyle="italic"
 					fontSize="3xl"
@@ -53,23 +55,22 @@ const ExperienceCard = (props) => {
 					{position}
 				</Text>
 
-				<Text
-					fontFamily="Victor Mono"
+				<Flex
+					direction="column"
+					fontFamily="Open Sans"
 					fontStyle="lg"
 					textAlign="center"
 				>
-					{description.map((item) => (
-						<Text fontSize="xl" fontWeight="700" m={2}>
+					{description.map((item, key) => (
+						<Text fontSize="xl" key={key} fontWeight="700" m={2}>
 							{item}
 						</Text>
 					))}
-				</Text>
+				</Flex>
 			</Flex>
 		</Flex>
 	);
 };
-
-const SkillsCard = () => {};
 
 const Resume = () => {
 	return (
@@ -79,53 +80,46 @@ const Resume = () => {
 			justifyContent={"center"}
 			direction={"column"}
 			width={"full"}
-			outline="5px solid red"
 		>
 			<Text
-				fontFamily="Victor Mono"
+				fontFamily="Open Sans"
 				fontSize="6xl"
-				color="#F4D35E"
+				color="#3B3561"
 				fontWeight="bold"
 			>
-				Experience
+				Software Experience
 			</Text>
 
-			{Experiences.map((cardInfo) => {
-				console.log(cardInfo);
-				console.log(cardInfo.imageName);
+			{Experiences.map((cardInfo, key) => {
 				const image = ImageHandler(cardInfo.imageName);
 
 				return (
 					<Flex
+						key={key}
 						width="100%"
 						mx="auto"
 						justifyContent="space-evenly"
 						alignItems="center"
 						flexDirection="row"
-						outline="5px blue solid"
 					>
 						<Spacer />
 						<Box
 							flex-direction="column"
 							justifyContent="center"
 							alignItems="center"
-							outline="5px green solid"
+							width="35%"
 							height="100%"
 						>
-							<Flex
-								justifyContent="center"
-								outline="5px yellow solid"
-								mb={3}
-							>
+							<Flex justifyContent="center" mb={3}>
 								<Image object-fit="scaled-down" src={image} />
 							</Flex>
 
 							<Text
-								fontFamily="Victor Mono"
+								fontFamily="Open Sans"
 								fontSize="3xl"
 								textAlign="center"
 								color="black"
-								bgColor="white"
+								bgColor="#fafafa"
 								rounded="xl"
 							>
 								{cardInfo.location} {cardInfo.duration}
@@ -137,6 +131,33 @@ const Resume = () => {
 					</Flex>
 				);
 			})}
+			<Text
+				fontFamily="Open Sans"
+				fontSize="6xl"
+				color="#3B3561"
+				fontWeight="bold"
+			>
+				Software Skills
+			</Text>
+			<Skills />
+			<Text
+				fontFamily="Open Sans"
+				fontSize="6xl"
+				color="#3B3561"
+				fontWeight="bold"
+			>
+				Education
+			</Text>
+			<Education />
+			<Text
+				fontFamily="Open Sans"
+				fontSize="6xl"
+				color="#3B3561"
+				fontWeight="bold"
+			>
+				Projects
+			</Text>
+			<Projects />
 		</Flex>
 	);
 };

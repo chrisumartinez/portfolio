@@ -17,11 +17,11 @@ const TypedPositions = ({ onVisible }) => {
 		>
 			<WindupChildren onFinished={() => onVisible()}>
 				<Pace getPace={(char) => (char === "\n" ? 100 : 30)}>
-					<p>{"Full Stack Developer."}</p>
+					{"Full Stack Developer."}
 					<Pause ms={750} />
-					<p>{"Student Development Specialist."}</p>
+					{"Student Development Specialist."}
 					<Pause ms={750} />
-					<p>{"Inginiero Mexicano Orgulloso."}</p>
+					{"Inginiero Mexicano Orgulloso."}
 				</Pace>
 			</WindupChildren>
 		</Text>

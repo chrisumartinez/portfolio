@@ -21,17 +21,17 @@ const MenuItemStack = () => {
 			direction={["column", "row", "row", "row"]}
 			pt={[4, 4, 0, 0]}
 		>
-			<RouterLink to="/">
-				<Link>Home</Link>
+			<RouterLink as={Link} to="/">
+				Home
 			</RouterLink>
-			<RouterLink to="/github">
-				<Link>Github</Link>
+			<RouterLink as={Link} to="/github">
+				Github
 			</RouterLink>
-			<RouterLink to="/linkedin">
-				<Link>LinkedIn</Link>
+			<RouterLink as={Link} to="/linkedin">
+				LinkedIn
 			</RouterLink>
-			<RouterLink to="/resume">
-				<Link>Resume</Link>
+			<RouterLink as={Link} to="/resume">
+				Resume
 			</RouterLink>
 		</Stack>
 	);
@@ -55,8 +55,7 @@ const NavBar = () => {
 			py={4}
 			justifyContent="space-between"
 			alignItems="center"
-			fontFamily="Victor Mono"
-			fontStyle="italic"
+			fontFamily="Open Sans"
 			fontWeight="700"
 			color="white"
 		>
