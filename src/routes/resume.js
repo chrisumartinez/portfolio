@@ -7,6 +7,9 @@ import Skills from "../components/skills.js";
 import Education from "../components/education.js";
 import Projects from "../components/projects.js";
 
+import { JSONResumeButton } from "../components/buttons";
+import { PDFResumeButton } from "../components/buttons";
+
 import imageSBCC from "../images/sbcc.png";
 import imageParabug from "../images/parabug.png";
 import imageCSUMB from "../images/csumb.png";
@@ -39,8 +42,8 @@ const ExperienceCard = (props) => {
 			p={10}
 			m={10}
 			justifyContent="space-around"
-			bg="#0B5351"
-			color="#fafafa"
+			bg="#08415C"
+			color="#EFEDE7"
 		>
 			<Flex direction="column" textAlign="center" justifyContent="center">
 				<Text
@@ -76,18 +79,47 @@ const Resume = () => {
 	return (
 		<Flex
 			textAlign={"center"}
-			pt={10}
+			alignItems="center"
 			justifyContent={"center"}
-			direction={"column"}
+			flexFlow="column wrap"
 			width={"full"}
+			pt={5}
 		>
 			<Text
 				fontFamily="Open Sans"
 				fontSize="6xl"
-				color="#3B3561"
+				color="#F87575"
 				fontWeight="bold"
 			>
-				Software Experience
+				Resume and Experience
+			</Text>
+
+			<Text
+				fontFamily="Open Sans"
+				fontSize="2xl"
+				color="#F87575"
+				fontWeight="bold"
+			>
+				Download in JSON or PDF format, or read below:
+			</Text>
+
+			<Flex
+				textAlign={"center"}
+				justifyContent="center"
+				direction={"row"}
+				width={"100%"}
+				mb={10}
+			>
+				<JSONResumeButton />
+				<PDFResumeButton />
+			</Flex>
+			<Text
+				fontFamily="Open Sans"
+				fontSize="5xl"
+				color="#F87575"
+				fontWeight="bold"
+			>
+				Software Experience:
 			</Text>
 
 			{Experiences.map((cardInfo, key) => {
@@ -119,7 +151,7 @@ const Resume = () => {
 								fontSize="3xl"
 								textAlign="center"
 								color="black"
-								bgColor="#fafafa"
+								bgColor="#EFEDE7"
 								rounded="xl"
 							>
 								{cardInfo.location} {cardInfo.duration}
@@ -133,17 +165,18 @@ const Resume = () => {
 			})}
 			<Text
 				fontFamily="Open Sans"
-				fontSize="6xl"
-				color="#3B3561"
+				fontSize="5xl"
+				color="#F87575"
 				fontWeight="bold"
 			>
 				Software Skills
 			</Text>
+
 			<Skills />
 			<Text
 				fontFamily="Open Sans"
-				fontSize="6xl"
-				color="#3B3561"
+				fontSize="5xl"
+				color="#F87575"
 				fontWeight="bold"
 			>
 				Education
@@ -151,8 +184,8 @@ const Resume = () => {
 			<Education />
 			<Text
 				fontFamily="Open Sans"
-				fontSize="6xl"
-				color="#3B3561"
+				fontSize="5xl"
+				color="#F87575"
 				fontWeight="bold"
 			>
 				Projects

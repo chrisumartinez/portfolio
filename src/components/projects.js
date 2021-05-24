@@ -19,7 +19,7 @@ const ProjectCard = (cardInfo, key) => {
 				fontSize="2xl"
 				fontStyle="bold"
 				fontFamily="Open Sans"
-				color=" #0000EE"
+				color=" #F87575"
 				href={cardInfo.cardInfo.url}
 				isExternal
 			>

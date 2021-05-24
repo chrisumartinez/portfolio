@@ -1,0 +1,148 @@
+{
+  "selectedTemplate": 2,
+  "headings": {
+    "education": "Education",
+    "skills": "Skills",
+    "projects": "Projects",
+    "work": "Experience"
+  },
+  "basics": {
+    "name": "Christian Martinez",
+    "phone": "8052902075",
+    "email": "chrisumartinez@gmail.com",
+    "location": {
+      "address": "Santa Barbara, CA"
+    },
+    "website": "https://github.com/chrisumartinez"
+  },
+  "education": [
+    {
+      "location": "Santa Barbara, CA",
+      "gpa": "",
+      "institution": "Santa Barbara City College",
+      "startDate": "Aug 2012",
+      "endDate": "May 2016",
+      "studyType": "AS",
+      "area": "Computer Science"
+    },
+    {
+      "institution": "California State University, Monterey Bay",
+      "location": "Monterey, CA",
+      "studyType": "BS",
+      "area": "Computer Science",
+      "startDate": "Aug 2016",
+      "endDate": "Dec 2018"
+    },
+    {
+      "institution": "CodePath iOS Bootcamp",
+      "location": "Monterey, CA",
+      "startDate": "Aug 2018",
+      "endDate": "Dec 2018"
+    }
+  ],
+  "work": [
+    {
+      "website": "",
+      "highlights": [
+        "Mentor a select group of CS students by teaching basic coding habits, introducing industry tools, and guiding them through continous development of a legacy codebase.",
+        "Assist the program director with general support of 2 STEM oriented student organizations: SHPE and SACNAS.",
+        "Advised STEM students in progressing in their extracurriculars by revising personal statements and reviewing internship applications."
+      ],
+      "position": "Student Science Development Specialist",
+      "location": "Santa Barbara, CA",
+      "startDate": "Jan 2020",
+      "company": "Santa Barbara City College, MESA",
+      "endDate": "Present"
+    },
+    {
+      "highlights": [
+        "Deployed responsive, web application service to replace existing labor intensive quote system.",
+        "Implemented client/serverside testing for user input and compiled data into JSON necessary for an accurate quote.",
+        "Esablished a product roadmap with a vision of executing a refined and scalable product for  the client.",
+        "Integrated Node.js / Javascript frameworks such as NodeMailer, Toastr, OAuth, and Google Maps API.",
+        "Generated an automatic email  system to streamline job requests containing KML / PDF files from client input to the  company."
+      ],
+      "company": "Parabug",
+      "position": "Software Engineer",
+      "location": "Monterey, CA",
+      "startDate": "Aug 2018",
+      "endDate": "Feb 2019"
+    },
+    {
+      "highlights": [
+        "Constructed prototypes of UI and SQL Databases",
+        "Implemented a clear, minimal UI for seamless user interactions that is tailored to the end user.",
+        "Integrated an SQL database to store local data in a portable location for the ease of the client. "
+      ],
+      "endDate": "April 2016",
+      "startDate": "Nov 2015",
+      "location": "Santa Barbara,  CA",
+      "position": "Software Engineer",
+      "company": "MESA Innovation Sign In Project"
+    }
+  ],
+  "skills": [
+    {
+      "level": "",
+      "keywords": [
+        "Python",
+        "Node.js",
+        "Swift",
+        "Java",
+        "Javascript"
+      ],
+      "name": "Programming Languages"
+    },
+    {
+      "keywords": [
+        "Git",
+        "SQL",
+        "Agile",
+        "Mobile Development",
+        "REST",
+        null,
+        null
+      ],
+      "name": "Other"
+    }
+  ],
+  "projects": [
+    {
+      "keywords": [
+        "Swift",
+        "Apple API",
+        "Spotify API"
+      ],
+      "name": "Heartbeats",
+      "description": "Developed  a Mobile iOS Application that communicates with the apple watch to play different genres  of  music according to the BPM. Developed and Tested UI elements for a simpler design. Integrated Spotify's API to allow users to sign into the app with Spotify."
+    },
+    {
+      "keywords": [
+        "Kotlin",
+        "Java",
+        null
+      ],
+      "name": "DigiCard",
+      "description": "An Android Application that virtualizes business cards for networking. Enhanced UI for a detailed, user experience. Collaborated with colleagues to detail clear specifications within a constrained timeline. "
+    },
+    {
+      "keywords": [
+        "Swift"
+      ],
+      "name": "Flix",
+      "description": "An iOS application that utilizes a third party API to show recent released movies  and their information. Iterated through design process by receiving feedback for UI,  prototyping in increasing fidelity,  and testing across various devices."
+    }
+  ],
+  "awards": [
+    {}
+  ],
+  "sections": [
+    "templates",
+    "profile",
+    "education",
+    "work",
+    "skills",
+    "projects",
+    "awards"
+  ]
+}

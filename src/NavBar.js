@@ -1,4 +1,4 @@
-import { Flex, Box, Stack } from "@chakra-ui/layout";
+import { Flex, Box, Stack, Spacer } from "@chakra-ui/layout";
 import { Text } from "@chakra-ui/layout";
 import { Link, Image } from "@chakra-ui/react";
 import Logo from "./images/code.svg";
@@ -14,24 +14,15 @@ const Icon = (props) => {
 
 const MenuItemStack = () => {
 	return (
-		<Stack
-			spacing={6}
-			align="center"
-			justify={["center", "space-between", "flex-end", "flex-end"]}
-			direction={["column", "row", "row", "row"]}
-			pt={[4, 4, 0, 0]}
-		>
+		<Stack align="center" direction="row" color="#F87575">
 			<RouterLink as={Link} to="/">
 				Home
 			</RouterLink>
-			<RouterLink as={Link} to="/github">
-				Github
-			</RouterLink>
-			<RouterLink as={Link} to="/linkedin">
-				LinkedIn
-			</RouterLink>
 			<RouterLink as={Link} to="/resume">
 				Resume
+			</RouterLink>
+			<RouterLink as={Link} to="/contact">
+				Contact
 			</RouterLink>
 		</Stack>
 	);
@@ -39,9 +30,10 @@ const MenuItemStack = () => {
 
 const BrandStack = () => {
 	return (
-		<Stack spacing={6} align="center" direction="row" pd={4}>
-			<Icon />
-			<Text>Christian Martinez</Text>
+		<Stack spacing={6} align="center" direction="row" pd={4} m={5}>
+			<Text fontSize="3xl" color="#F87575" fontFamily="Open Sans">
+				Christian Martinez
+			</Text>
 		</Stack>
 	);
 };
@@ -49,18 +41,17 @@ const BrandStack = () => {
 const NavBar = () => {
 	return (
 		<Flex
-			bg="#333"
-			w="100%"
-			px={5}
+			bg="#EFEDE7"
+			flexFlow="column wrap"
+			px={4}
 			py={4}
-			justifyContent="space-between"
+			justifyContent="center"
 			alignItems="center"
-			fontFamily="Open Sans"
-			fontWeight="700"
-			color="white"
 		>
-			<MenuItemStack />
 			<BrandStack />
+
+			<Spacer />
+			<MenuItemStack />
 		</Flex>
 	);
 };

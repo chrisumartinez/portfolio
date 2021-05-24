@@ -88,7 +88,7 @@ const EducationSection = () => {
 								fontSize="3xl"
 								textAlign="center"
 								color="black"
-								bgColor="#fafafa"
+								bgColor="#EFEDE7"
 								rounded="xl"
 							>
 								{cardInfo.location} {cardInfo.duration}
