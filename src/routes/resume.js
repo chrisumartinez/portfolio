@@ -1,11 +1,10 @@
 import React from "react";
-import { Flex, Text, Box, Spacer } from "@chakra-ui/layout";
-import { Experiences } from "../data/resumeData";
-import { Image } from "@chakra-ui/image";
+import { Flex, Text } from "@chakra-ui/layout";
 
 import Skills from "../components/skills.js";
 import Education from "../components/education.js";
 import Projects from "../components/projects.js";
+import Experience from "../components/experience.js";
 
 import { JSONResumeButton } from "../components/buttons";
 import { PDFResumeButton } from "../components/buttons";
@@ -30,167 +29,76 @@ export const ImageHandler = (imageName) => {
 	}
 };
 
-const ExperienceCard = (props) => {
-	const { position, description } = props;
-
-	return (
-		<Flex
-			box-shadow=" rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;"
-			maxW="640px"
-			direction="column"
-			rounded="lg"
-			p={10}
-			m={10}
-			justifyContent="space-around"
-			bg="#08415C"
-			color="#EFEDE7"
-		>
-			<Flex direction="column" textAlign="center" justifyContent="center">
-				<Text
-					fontFamily="Open Sans"
-					fontWeight="bold"
-					fontStyle="italic"
-					fontSize="3xl"
-					textAlign="center"
-					pb={4}
-					as="u"
-				>
-					{position}
-				</Text>
-
-				<Flex
-					direction="column"
-					fontFamily="Open Sans"
-					fontStyle="lg"
-					textAlign="center"
-				>
-					{description.map((item, key) => (
-						<Text fontSize="xl" key={key} fontWeight="700" m={2}>
-							{item}
-						</Text>
-					))}
-				</Flex>
-			</Flex>
-		</Flex>
-	);
-};
-
 const Resume = () => {
 	return (
 		<Flex
-			textAlign={"center"}
-			alignItems="center"
-			justifyContent={"center"}
 			flexFlow="column wrap"
-			width={"full"}
-			pt={5}
+			justifyContent="center"
+			alignItems="center"
 		>
-			<Text
-				fontFamily="Open Sans"
-				fontSize="6xl"
-				color="#F87575"
-				fontWeight="bold"
-			>
-				Resume and Experience
-			</Text>
-
-			<Text
-				fontFamily="Open Sans"
-				fontSize="2xl"
-				color="#F87575"
-				fontWeight="bold"
-			>
-				Download in JSON or PDF format, or read below:
-			</Text>
-
 			<Flex
-				textAlign={"center"}
-				justifyContent="center"
-				direction={"row"}
-				width={"100%"}
-				mb={10}
+				alignItems="center"
+				justifyContent={"center"}
+				flexFlow="column wrap"
+				w="full"
 			>
-				<JSONResumeButton />
-				<PDFResumeButton />
+				<Text
+					fontFamily="Open Sans"
+					fontSize="4xl"
+					fontWeight="bold"
+					textAlign="center"
+					w="full"
+				>
+					Download in JSON or PDF format, or read below:
+				</Text>
+				<Flex
+					w="full"
+					dir="row"
+					justifyContent="center"
+					alignItems="center"
+					mb={10}
+				>
+					<JSONResumeButton />
+					<PDFResumeButton />
+				</Flex>
+
+				<Text
+					fontFamily="Open Sans"
+					fontSize="5xl"
+					color="#F87575"
+					fontWeight="bold"
+				>
+					Software Experience:
+				</Text>
+				<Experience />
+				<Text
+					fontFamily="Open Sans"
+					fontSize="5xl"
+					color="#F87575"
+					fontWeight="bold"
+				>
+					Software Skills:
+				</Text>
+				<Skills />
+				<Text
+					fontFamily="Open Sans"
+					fontSize="5xl"
+					color="#F87575"
+					fontWeight="bold"
+				>
+					Education:
+				</Text>
+				<Education />
+				<Text
+					fontFamily="Open Sans"
+					fontSize="5xl"
+					color="#F87575"
+					fontWeight="bold"
+				>
+					Projects:
+				</Text>
+				<Projects />
 			</Flex>
-			<Text
-				fontFamily="Open Sans"
-				fontSize="5xl"
-				color="#F87575"
-				fontWeight="bold"
-			>
-				Software Experience:
-			</Text>
-
-			{Experiences.map((cardInfo, key) => {
-				const image = ImageHandler(cardInfo.imageName);
-
-				return (
-					<Flex
-						key={key}
-						width="100%"
-						mx="auto"
-						justifyContent="space-evenly"
-						alignItems="center"
-						flexDirection="row"
-					>
-						<Spacer />
-						<Box
-							flex-direction="column"
-							justifyContent="center"
-							alignItems="center"
-							width="35%"
-							height="100%"
-						>
-							<Flex justifyContent="center" mb={3}>
-								<Image object-fit="scaled-down" src={image} />
-							</Flex>
-
-							<Text
-								fontFamily="Open Sans"
-								fontSize="3xl"
-								textAlign="center"
-								color="black"
-								bgColor="#EFEDE7"
-								rounded="xl"
-							>
-								{cardInfo.location} {cardInfo.duration}
-							</Text>
-						</Box>
-						<Spacer />
-
-						<ExperienceCard {...cardInfo} key={cardInfo.id} />
-					</Flex>
-				);
-			})}
-			<Text
-				fontFamily="Open Sans"
-				fontSize="5xl"
-				color="#F87575"
-				fontWeight="bold"
-			>
-				Software Skills
-			</Text>
-
-			<Skills />
-			<Text
-				fontFamily="Open Sans"
-				fontSize="5xl"
-				color="#F87575"
-				fontWeight="bold"
-			>
-				Education
-			</Text>
-			<Education />
-			<Text
-				fontFamily="Open Sans"
-				fontSize="5xl"
-				color="#F87575"
-				fontWeight="bold"
-			>
-				Projects
-			</Text>
-			<Projects />
 		</Flex>
 	);
 };

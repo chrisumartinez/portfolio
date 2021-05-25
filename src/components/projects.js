@@ -3,7 +3,7 @@ import { Projects } from "../data/resumeData";
 import { Flex, Text, Link } from "@chakra-ui/layout";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
-const ProjectCard = (cardInfo, key) => {
+const ProjectCard = (cardInfo) => {
 	return (
 		<Flex
 			justifyContent="space-around"

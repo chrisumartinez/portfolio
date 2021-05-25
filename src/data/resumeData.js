@@ -52,6 +52,18 @@ export const Skills = [
 
 export const Projects = [
 	{
+		title: "Hacker Stories",
+		url: "https://github.com/chrisumartinez/hackernews",
+		keywords: ["React", "Javascript", "Front-End", "Jest"],
+		date: "October 2020 - May 2021",
+		description: [
+			"• Deployed a responsive, SPA that uses React and Javascript to allow the user to browse specific articles fetched from the hacker news API. ",
+			"• Tested the design and control of the SPA by unit testing, integration testing, and snapshot testing using the JEST Testing Framework.",
+			"• Configured the front end design with the use of styled components and CSS in JS.",
+			"• Discovered an enjoyment and passion for web development using React and its various third party libraries.",
+		],
+	},
+	{
 		title: "Heartbeats",
 		url: "https://github.com/LetsGetSwiftyy/heartBeats",
 		keywords: ["Swift", "Apple API", "Spotify API"],

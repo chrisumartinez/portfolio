@@ -1,16 +1,7 @@
-import { Flex, Box, Stack, Spacer } from "@chakra-ui/layout";
+import { Flex, Stack, Spacer } from "@chakra-ui/layout";
 import { Text } from "@chakra-ui/layout";
-import { Link, Image } from "@chakra-ui/react";
-import Logo from "./images/code.svg";
+import { Link } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
-
-const Icon = (props) => {
-	return (
-		<Box boxSize="30px">
-			<Image src={Logo} alt="Logo" />
-		</Box>
-	);
-};
 
 const MenuItemStack = () => {
 	return (
@@ -21,9 +12,6 @@ const MenuItemStack = () => {
 			<RouterLink as={Link} to="/resume">
 				Resume
 			</RouterLink>
-			<RouterLink as={Link} to="/contact">
-				Contact
-			</RouterLink>
 		</Stack>
 	);
 };
@@ -31,9 +19,11 @@ const MenuItemStack = () => {
 const BrandStack = () => {
 	return (
 		<Stack spacing={6} align="center" direction="row" pd={4} m={5}>
-			<Text fontSize="3xl" color="#F87575" fontFamily="Open Sans">
-				Christian Martinez
-			</Text>
+			<RouterLink as={Link} to="/">
+				<Text fontSize="3xl" color="#F87575" fontFamily="Open Sans">
+					Christian Martinez
+				</Text>
+			</RouterLink>
 		</Stack>
 	);
 };
@@ -42,14 +32,13 @@ const NavBar = () => {
 	return (
 		<Flex
 			bg="#EFEDE7"
-			flexFlow="column wrap"
+			flexFlow="row wrap"
 			px={4}
 			py={4}
 			justifyContent="center"
 			alignItems="center"
 		>
 			<BrandStack />
-
 			<Spacer />
 			<MenuItemStack />
 		</Flex>

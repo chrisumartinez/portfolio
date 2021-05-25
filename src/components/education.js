@@ -1,29 +1,15 @@
 import { Education } from "../data/resumeData";
 import React from "react";
-import { Flex, Text, Spacer, Box } from "@chakra-ui/layout";
+import { Flex, Text, Spacer } from "@chakra-ui/layout";
 import { ImageHandler } from "../routes/resume.js";
 import { Image } from "@chakra-ui/image";
 
 const EducationCard = (props) => {
-	const { studyType, institution, startDate, endDate, major } = props;
+	const { studyType, startDate, endDate, major } = props;
 
 	return (
-		<Flex
-			maxW="640px"
-			direction="column"
-			rounded="lg"
-			p={10}
-			m={10}
-			justifyContent="space-around"
-			bg="#0B5351"
-			color="#fafafa"
-		>
-			<Flex
-				direction="column"
-				m={10}
-				textAlign="center"
-				justifyContent="center"
-			>
+		<Flex direction="column" rounded="lg" justifyContent="center">
+			<Flex direction="column" textAlign="center" justifyContent="center">
 				<Text
 					fontFamily="Open Sans"
 					fontWeight="bold"
@@ -32,6 +18,7 @@ const EducationCard = (props) => {
 					textAlign="center"
 					pb={4}
 					as="u"
+					color="#F87575"
 				>
 					{studyType}
 				</Text>
@@ -63,25 +50,21 @@ const EducationSection = () => {
 						key={key}
 						width="100%"
 						mx="auto"
-						justifyContent="space-evenly"
+						justifyContent="center"
 						alignItems="center"
-						flexDirection="row"
+						flexDirection="column"
+						mb={5}
+						mt={5}
 					>
-						<Spacer />
-						<Box
-							flex-direction="column"
+						<Flex
+							mx="auto"
 							justifyContent="center"
 							alignItems="center"
-							width="35%"
-							height="100%"
+							flexDirection="column"
 						>
-							<Flex justifyContent="center" mb={3}>
-								<Image
-									object-fit="scaled-down"
-									maxh="170px"
-									src={image}
-								/>
-							</Flex>
+							<Spacer />
+
+							<Image object-fit="cover" src={image} />
 
 							<Text
 								fontFamily="Open Sans"
@@ -91,12 +74,12 @@ const EducationSection = () => {
 								bgColor="#EFEDE7"
 								rounded="xl"
 							>
-								{cardInfo.location} {cardInfo.duration}
+								{cardInfo.duration}
 							</Text>
-						</Box>
-						<Spacer />
+							<Spacer />
 
-						<EducationCard {...cardInfo} key={cardInfo.id} />
+							<EducationCard {...cardInfo} key={cardInfo.id} />
+						</Flex>
 					</Flex>
 				);
 			})}
