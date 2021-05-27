@@ -31,24 +31,14 @@ export const ImageHandler = (imageName) => {
 
 const Resume = () => {
 	return (
-		<Flex
-			flexFlow="column wrap"
-			justifyContent="center"
-			alignItems="center"
-		>
+		<Flex flexFlow="column " justifyContent="center" alignItems="center">
 			<Flex
 				alignItems="center"
 				justifyContent={"center"}
 				flexFlow="column wrap"
 				w="full"
 			>
-				<Text
-					fontFamily="Open Sans"
-					fontSize="4xl"
-					fontWeight="bold"
-					textAlign="center"
-					w="full"
-				>
+				<Text fontFamily="Open Sans" fontSize="4xl" fontWeight="bold">
 					Download in JSON or PDF format, or read below:
 				</Text>
 				<Flex
@@ -70,6 +60,7 @@ const Resume = () => {
 				>
 					Software Experience:
 				</Text>
+
 				<Experience />
 				<Text
 					fontFamily="Open Sans"

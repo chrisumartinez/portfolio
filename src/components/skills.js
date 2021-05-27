@@ -7,21 +7,37 @@ const LanguageCard = () => {
 
 	return (
 		<Flex
-			dir="row"
-			justifyContent="space-around"
+			flexDirection="column"
+			justifyContent="center"
 			alignItems="center"
 			fontSize="4xl"
 			fontFamily="Open Sans"
 			fontStyle="italic"
 		>
-			Languages : {"  "}
-			{languages.map((language, key) => {
-				return (
-					<Text fontSize="3xl" key={key} fontFamily="Open Sans" m={2}>
-						{language}
-					</Text>
-				);
-			})}
+			<Text fontSize="4xl" fontFamily="Open Sans" fontStyle="italic">
+				Languages:
+			</Text>
+			<Flex
+				flexDirection="row"
+				justifyContent="center"
+				alignItems="center"
+				fontSize="4xl"
+				fontFamily="Open Sans"
+				fontStyle="italic"
+			>
+				{languages.map((language, key) => {
+					return (
+						<Text
+							fontSize="3xl"
+							key={key}
+							fontFamily="Open Sans"
+							m={2}
+						>
+							{language}
+						</Text>
+					);
+				})}
+			</Flex>
 		</Flex>
 	);
 };
@@ -31,21 +47,37 @@ const OtherCard = () => {
 
 	return (
 		<Flex
-			dir="row"
+			flexDirection="column"
 			justifyContent="space-around"
 			alignItems="center"
 			fontSize="4xl"
 			fontFamily="Open Sans"
 			fontStyle="italic"
 		>
-			Other:{"  "}
-			{other.map((item, key) => {
-				return (
-					<Text fontSize="3xl" key={key} fontFamily="Open Sans" m={2}>
-						{item}
-					</Text>
-				);
-			})}
+			<Text fontSize="4xl" fontFamily="Open Sans" fontStyle="italic">
+				Other:
+			</Text>
+			<Flex
+				flexDirection="row"
+				justifyContent="center"
+				alignItems="center"
+				fontSize="4xl"
+				fontFamily="Open Sans"
+				fontStyle="italic"
+			>
+				{other.map((item, key) => {
+					return (
+						<Text
+							fontSize="3xl"
+							key={key}
+							fontFamily="Open Sans"
+							m={2}
+						>
+							{item}
+						</Text>
+					);
+				})}
+			</Flex>
 		</Flex>
 	);
 };

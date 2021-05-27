@@ -64,7 +64,7 @@ const EducationSection = () => {
 						>
 							<Spacer />
 
-							<Image object-fit="cover" src={image} />
+							<Image object-fit="scaled-down" src={image} />
 
 							<Text
 								fontFamily="Open Sans"

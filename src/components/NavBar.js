@@ -32,7 +32,7 @@ const NavBar = () => {
 	return (
 		<Flex
 			bg="#EFEDE7"
-			flexFlow="row wrap"
+			flexFlow="column wrap"
 			px={4}
 			py={4}
 			justifyContent="center"

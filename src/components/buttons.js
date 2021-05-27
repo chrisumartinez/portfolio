@@ -2,8 +2,6 @@ import React from "react";
 import { Button } from "@chakra-ui/button";
 import { Link } from "@chakra-ui/layout";
 
-import ResumeJSON from "../data/resume.json";
-import ResumePDF from "../data/resume.pdf";
 import { Icon } from "@chakra-ui/icon";
 
 import { FaFilePdf } from "react-icons/fa";
@@ -23,9 +21,9 @@ export const JSONResumeButton = () => {
 			leftIcon={image}
 			justifyContent="center"
 			as={Link}
-			href={ResumeJSON}
+			href={process.env.PUBLIC_URL + "/chrisumartinez_resume.json"}
 			target="_blank"
-			download="resume.json"
+			download="chrisumartinez_resume.json"
 		>
 			JSON
 		</Button>
@@ -45,7 +43,7 @@ export const PDFResumeButton = () => {
 			leftIcon={image}
 			as={Link}
 			justifyContent="center"
-			href={ResumePDF}
+			href={process.env.PUBLIC_URL + "/chrisumartinez_resume.pdf"}
 			target="_blank"
 		>
 			PDF

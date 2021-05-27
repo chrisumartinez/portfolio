@@ -1,5 +1,5 @@
 {
-  "selectedTemplate": 2,
+  "selectedTemplate": 1,
   "headings": {
     "education": "Education",
     "skills": "Skills",
@@ -13,18 +13,9 @@
     "location": {
       "address": "Santa Barbara, CA"
     },
-    "website": "https://github.com/chrisumartinez"
+    "website": "https://www.linkedin.com/in/martinez-christian/"
   },
   "education": [
-    {
-      "location": "Santa Barbara, CA",
-      "gpa": "",
-      "institution": "Santa Barbara City College",
-      "startDate": "Aug 2012",
-      "endDate": "May 2016",
-      "studyType": "AS",
-      "area": "Computer Science"
-    },
     {
       "institution": "California State University, Monterey Bay",
       "location": "Monterey, CA",
@@ -38,6 +29,15 @@
       "location": "Monterey, CA",
       "startDate": "Aug 2018",
       "endDate": "Dec 2018"
+    },
+    {
+      "location": "Santa Barbara, CA",
+      "gpa": "",
+      "institution": "Santa Barbara City College",
+      "startDate": "Aug 2012",
+      "endDate": "May 2016",
+      "studyType": "AS",
+      "area": "Computer Science"
     }
   ],
   "work": [
@@ -46,7 +46,7 @@
       "highlights": [
         "Mentor a select group of CS students by teaching basic coding habits, introducing industry tools, and guiding them through continous development of a legacy codebase.",
         "Assist the program director with general support of 2 STEM oriented student organizations: SHPE and SACNAS.",
-        "Advised STEM students in progressing in their extracurriculars by revising personal statements and reviewing internship applications."
+        "Advise STEM students in progressing in their extracurriculars by revising personal statements and reviewing internship applications."
       ],
       "position": "Student Science Development Specialist",
       "location": "Santa Barbara, CA",
@@ -70,7 +70,7 @@
     },
     {
       "highlights": [
-        "Constructed prototypes of UI and SQL Databases",
+        "Constructed prototypes of UI and SQL Databases.",
         "Implemented a clear, minimal UI for seamless user interactions that is tailored to the end user.",
         "Integrated an SQL database to store local data in a portable location for the ease of the client. "
       ],
@@ -87,7 +87,7 @@
       "keywords": [
         "Python",
         "Node.js",
-        "Swift",
+        "React",
         "Java",
         "Javascript"
       ],
@@ -99,9 +99,7 @@
         "SQL",
         "Agile",
         "Mobile Development",
-        "REST",
-        null,
-        null
+        "REST"
       ],
       "name": "Other"
     }
@@ -109,18 +107,18 @@
   "projects": [
     {
       "keywords": [
-        "Swift",
-        "Apple API",
-        "Spotify API"
+        "React",
+        "Javascript",
+        "Front-End",
+        "Jest"
       ],
-      "name": "Heartbeats",
-      "description": "Developed  a Mobile iOS Application that communicates with the apple watch to play different genres  of  music according to the BPM. Developed and Tested UI elements for a simpler design. Integrated Spotify's API to allow users to sign into the app with Spotify."
+      "name": "Hacker Stories",
+      "description": "Deployed a responsive, SPA that uses React and Javascript to allow the user to browse specific articles fetched from the hacker news API. Tested the design and control of the SPA by unit testing, integration testing, and snapshot testing using the JEST Testing Framework. Configured the front end design with the use of styled components and CSS in JS. Discovered an enjoyment and passion for web development using React and its various third party libraries."
     },
     {
       "keywords": [
         "Kotlin",
-        "Java",
-        null
+        "Java"
       ],
       "name": "DigiCard",
       "description": "An Android Application that virtualizes business cards for networking. Enhanced UI for a detailed, user experience. Collaborated with colleagues to detail clear specifications within a constrained timeline. "

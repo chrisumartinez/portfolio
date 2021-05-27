@@ -59,7 +59,7 @@ const ExperienceItem = ({ item }) => {
 				alignItems="center"
 			>
 				<Image object-fit="cover" src={image} />
-				<Text textAlign="center" fontFamily="Open Sans" fontSize="xl">
+				<Text textAlign="center" fontFamily="Open Sans" fontSize="3xl">
 					{item.duration}
 				</Text>
 			</Flex>

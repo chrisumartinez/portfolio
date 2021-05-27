@@ -52,7 +52,7 @@ const TypedPositions = ({ onVisible }) => {
 					<br />
 					<Pause ms={550} />
 					<span style={{ color: "#1BA098" }}>
-						{"Ingeniero Mexicano Orgulloso."}{" "}
+						{" Orgulloso Ingeniero Mexicano."}
 					</span>
 				</Pace>
 			</WindupChildren>
@@ -86,7 +86,7 @@ const Home = () => {
 				<Text
 					fontFamily="Open Sans"
 					color="#F87575"
-					fontSize="4xl"
+					fontSize="6xl"
 					fontWeight="bold"
 				>
 					Christian Martinez
