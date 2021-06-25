@@ -3,13 +3,13 @@ import { Text } from "@chakra-ui/layout";
 import { Link } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 
-const MenuItemStack = () => {
+const MenuItemStack = ({ handleIsOpen }) => {
 	return (
 		<Stack align="center" direction="row" color="#F87575">
-			<RouterLink as={Link} to="/">
+			<RouterLink as={Link} to="/" onClick={handleIsOpen}>
 				Home
 			</RouterLink>
-			<RouterLink as={Link} to="/resume">
+			<RouterLink as={Link} to="/resume" onClick={handleIsOpen}>
 				Resume
 			</RouterLink>
 		</Stack>
@@ -28,7 +28,7 @@ const BrandStack = () => {
 	);
 };
 
-const NavBar = () => {
+const NavBar = ({ handleIsOpen }) => {
 	return (
 		<Flex
 			bg="#EFEDE7"
@@ -40,7 +40,7 @@ const NavBar = () => {
 		>
 			<BrandStack />
 			<Spacer />
-			<MenuItemStack />
+			<MenuItemStack handleIsOpen={handleIsOpen} />
 		</Flex>
 	);
 };
