@@ -39,7 +39,7 @@ const Resume = () => {
 				w="full"
 			>
 				<Text fontFamily="Open Sans" fontSize="4xl" fontWeight="bold">
-					Download in JSON or PDF format, or read below:
+					Download my resume below:
 				</Text>
 				<Flex
 					w="full"

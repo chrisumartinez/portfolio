@@ -97,6 +97,17 @@ export const Projects = [
 	},
 ];
 
+export const AboutMeBio = [
+	{
+		name: "Christian Martinez",
+		tags: "Engineer, STEM Supporter, Mexicano.",
+		description:
+			"I was born in raised in sunny Santa Barbara, California. I attended Santa Barbara City College, where I was able to transfer to California State University, Monterey Bay in Computer Science. I graduated out in 2018, where I was the first of my family to graduate from a university. I am currently work as a Student Development Specialist at Santa Barbara Community College, where I support under-represented students to begin their career in STEM.",
+		hobbies:
+			"If I'm not coding, I'm an avid football and basketball (Arsenal & LAFC) supporter, and a hip hop enthusiast. I make the best attempt to keep up to date on the latest and greatest regarding web development, more specifically in React.",
+	},
+];
+
 export const Education = [
 	{
 		imageName: "sbcc",

@@ -12,6 +12,9 @@ const MenuItemStack = ({ handleIsOpen }) => {
 			<RouterLink as={Link} to="/resume" onClick={handleIsOpen}>
 				Resume
 			</RouterLink>
+			<RouterLink as={Link} to="/about" onClick={handleIsOpen}>
+				About
+			</RouterLink>
 		</Stack>
 	);
 };
